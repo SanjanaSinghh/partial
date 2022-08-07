@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import { PreLoader } from "../PreLoader";
 import { useSelector,useDispatch } from 'react-redux'
 import cart, {additem ,deleteitem} from '../features/cart/cart'
+import { ExternalLink } from 'react-external-link';
 
 const style = {
   position: "absolute",
@@ -319,11 +320,15 @@ console.log(mdata)
                   .toFixed(2)}
               </div>
             </div>
-            <Link className="link" to="/payment">
+            {/* <Link className="link" to={{ pathname: "https://sanjana-portfolio.netlify.app/" }}> */}
+            {/* <ExternalLink href="https://sanjana-portfolio.netlify.app/" > */}
+            <a href="https://sanjana-portfolio.netlify.app/" rel="noopener noreferrer">
               <button className="checkout">
                 CHECKOUT&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i>
               </button>
-            </Link>
+              </a>
+              {/* </ExternalLink> */}
+            {/* </Link> */}
           </div>
         ) : (
           <div className="cart_empty">
